@@ -36,8 +36,10 @@ class  VentaTarjeta{
   const coeficienteTarjeta
   const cantidadCuotas
   method importe(){
-    return coeficienteTarjeta * cantidadCuotas + 0.01 * super() + super()
-	}
+     // uso super para tomar el valor de importe original
+   return super() + coeficienteTarjeta * cantidadCuotas + 0.01 * super()  // segundo super es para el 0.01 * el importe de la compra
+    }
+
 }
 class Local{
 	const ventasTotales =[]
